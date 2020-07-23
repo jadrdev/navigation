@@ -15,6 +15,10 @@ export default function Home(props) {
         title="Ir a contacto"
         onPress={() => navigation.navigate('contact')}
       />
+      <Button
+        title="Ir a cursos"
+        onPress={() => navigation.navigate('contact', {screen: 'Courses'})}
+      />
     </View>
   );
 }
