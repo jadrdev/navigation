@@ -1,16 +1,28 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
-import Home from '../screens/Home';
-import About from '../screens/About';
-import Contact from '../screens/Contact';
+import HomeStack from './HomeStack.js';
+import ContactStack from './ContactStack';
 
 const Drawer = createDrawerNavigator();
 
 export default function Navigation() {
-  <Drawer.Navigator>
-    <Drawer.Screen name="home" component={Home} options={{title: 'Home'}} />
-  </Drawer.Navigator>;
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen
+        name="home"
+        component={HomeStack}
+        options={{
+          title: 'Home',
+        }}
+      />
+      <Drawer.Screen
+        name="contact"
+        component={ContactStack}
+        options={{title: 'Contact'}}
+      />
+    </Drawer.Navigator>
+  );
 }
 
 // export default function Navigation() {
